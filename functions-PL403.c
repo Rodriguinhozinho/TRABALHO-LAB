@@ -126,12 +126,12 @@ void mdcvetor(int vetor[]){
                 x = vetor[i]; //coloca cada valor do vetor na variavél x
                 y= vetor[i+1]; //coloca cada valor seguido de x na variavél y
                 if (x<0){ 
-                        x = -x;
+                        x = -x; //caso o valor seja negativo ,transforma o em positivo
                 }
                 if (y<0){
-                        y=-y;
+                        y=-y; //caso o valor seja negativo, transforma-o em positivo
                 }
-                if (x<y){ // s
+                if (x<y){ 
                         menor = x;
                 }
                 if (y<x){
@@ -150,7 +150,7 @@ void mdcvetor(int vetor[]){
 void matriz2vetor(int vetor[]){
         int i, j, ordenado[TAM], original[TAM], matriz2[TAM][TAM];
         for (i=0;i<TAM;i++){
-                ordenado[i]=vetor[i];
+                ordenado[i]=vetor[i]; 
         }
         ordenarvetor(ordenado);
         for (i=0; i<TAM; i++){

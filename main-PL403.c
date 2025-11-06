@@ -4,12 +4,12 @@
 #include "functions-PL403.h"
 int main(){
         int vetor[TAM], simetrico[TAM];
-        int i, j, menu=-53;
-        srand(time(NULL));
+        int i, j, menu=-53; // A varivél menu é um valor aleatório para garantir que o menu aparece pelo menos uma vez
+        srand(time(NULL)); //A semente gerada vai variar conforme o tempo
         for (i=0 ; i<TAM; i++){
                 printf("Introduza números inteiros entre -3 e 27:\n");
                 scanf("%d" , &vetor[i]);
-                if (vetor[i] < -3 || vetor[i]>27){
+                if (vetor[i] < -3 || vetor[i]>27){ //validação de entrada
                         printf("Valor Inválido!");
                         i--;
                 }
@@ -30,7 +30,7 @@ int main(){
                 printf("0 - Finalizar\n");
                 printf("Caso: ");
                 scanf("%d", &menu);
-                switch(menu){
+                switch(menu){ //Switch Case que vai chamar a função correspondente á operação  que foi escolhida no menu
                         case 1:
                                 simetricovetor(vetor);
                                 break;
